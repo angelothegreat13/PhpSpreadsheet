@@ -535,15 +535,16 @@ class Csv extends BaseReader
         }
 
         // Attempt to guess mimetype
-        $type = mime_content_type($pFilename);
-        $supportedTypes = [
-            'application/csv',
-            'text/csv',
-            'text/plain',
-            'inode/x-empty',
-        ];
+//         $type = mime_content_type($pFilename);
+//         $supportedTypes = [
+//             'application/csv',
+//             'text/csv',
+//             'text/plain',
+//             'inode/x-empty',
+//         ];
 
-        return in_array($type, $supportedTypes, true);
+//         return in_array($type, $supportedTypes, true);
+        return true;
     }
 
     private static function guessEncodingTestNoBom(string &$encoding, string &$contents, string $compare, string $setEncoding): void
